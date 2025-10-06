@@ -3,12 +3,19 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
+
 <div class="Homepage">
-    <h1>Homepage</h1>
+    <div class="hero_parent">
+        <img src="static/images/single_flower_hero_image.jpg">
 
-    <h3>Navbar</h3>
-    <img src="{{ url_for('static', filename='Celestia_Botanica_Logo_Image.jpg') }}" id="Logo_Image">
+        <div id="hero_text">
+            <h1>Flowers Are Love Made Visible</h1>
+            <h5>Artisanal arrangements crafted with elegance</h5>
+            <button id="homepage_shop_button">Discover your perfect bouquet</button>
+        </div>
 
+    </div>
+    <h3>Hero</h3>
     <h3>Categories</h3>
     <h3>Contact</h3>
     <h3>About Me</h3>
