@@ -1,13 +1,25 @@
+/*-----------------------------------Font---------------------------------*/
+.playfair {
+  font-family: "Playfair Display", serif;
+  font-weight: 600; /* adjust between 400–900 */
+  font-style: normal;
+}
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*----------------------------------Header Styles-------------------------------------*/
 
 
-/*-----------Announcement bar----------------*/
+/*-----------Announcement bar----------------------------------------------------------*/
 .announcement-bar{
     display: flex;
-    justify-content: space-between; /* pushes left & right apart */
-    align-items: center; /* vertically center the text */
-    background-color: #EEDFD2; /* soft blush */
-    color: #555555; /* warm gray text */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEDFD2;
+    color: #4a3b22;
     font-family: 'Helvetica', sans-serif;
     font-size: 12px;
     padding: 8px 20px;
@@ -30,12 +42,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     background: #D8C3C0;
     font-family: "Georgia", serif; /* classy serif */
-    color: #3d3d4f; /*charcoal */
+    color: color: #3d3d4f; /*charcoal */
 
 }
 #Celestia_Botanica_Title{
     text-align: center;
     font-size: 30px;
+
 
 }
 #city_title{
@@ -54,12 +67,6 @@
 
 }
 
-.socials svg {
-
-
-}
-
-
 /*----------------------------------Nav Bar----------------------------------------------*/
 .nav_bar{
     display: flex;
@@ -70,7 +77,10 @@
 
 }
 /*----------------------------------Homepage Styles-------------------------------------*/
-
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #f3e7d3;
+}
 
 
 /*----------------------------------Hero Styles-------------------------------------*/
@@ -84,36 +94,49 @@
 }
 .hero_parent {
   position: relative;
-  height: 85vh;
+  height: 75vh;
   overflow: hidden;
 }
-.hero_parent::after {
+.hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* white overlay at 40% opacity */
 }
+
 
 #hero_text {
   position: absolute;
   top: 50%;
   right: 5%;
   transform: translateY(-70%);
-  color: #3d3d4f;
+  color: #FFFAF3;
   text-align: right;
   z-index: 10;         /* sits above the image and overlay */
+  font-size: 70px;
+  font-family: "Pinyon Script", cursive;
+
 }
 
+#hero_text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
 #homepage_shop_button{
     border-radius: 10px;
     background: #EEDFD2;
     border-color: none;
     height: 50px;
     width: 300px;
-    font-weight: bold;
     font-size: 16;
     color: #3d3d4f; /*charcoal */
     margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Playfair Display', sans-serif;
 
 }
 
