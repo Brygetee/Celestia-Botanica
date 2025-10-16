@@ -24,12 +24,16 @@
     font-size: 14px;
     padding: 8px 20px;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 #address_area{
     text-align: right;
     margin: 30px;
 }
+
 /*-----------------Top Header------------------*/
 
 .top_header{
@@ -120,9 +124,14 @@ body {
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 .main-content {
   flex: 1;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 /*----------------------------------Hero Styles-------------------------------------*/
 .hero_parent {
@@ -200,20 +209,21 @@ html, body {
 /*-----------------------------------Category Styles------------------------------------*/
 .categories{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 #categories_title{
     color: #7c5a42;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto;
     font-family: "Pinyon Script", cursive;
     font-size: 50px;
     border: 10px double #c8a96a;
     width: 400px;
-    margin-left: 35%;
     padding: 10px;
     background-color: #f5efe6;
+    display: block;
 
 }
 #categories_title a{
