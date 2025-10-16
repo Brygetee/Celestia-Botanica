@@ -1,7 +1,7 @@
 /*-----------------------------------Font---------------------------------*/
 .playfair {
   font-family: "Playfair Display", serif;
-  font-weight: 600; /* adjust between 400–900 */
+  font-weight: 600;
   font-style: normal;
 }
 .pinyon-script-regular {
@@ -41,7 +41,7 @@
     top: 0;
     z-index: 1000; /* stays above other content */
     height: 80px;
-    padding-top: 5px;
+    padding: 5px 0px 8px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background: #F5EFE6;
@@ -61,7 +61,7 @@
     text-align: center;
     padding-top: 0px;
     margin-top: 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: #7c5a42;
 
 }
@@ -72,7 +72,6 @@
 
 .title_link:hover {
     color: inherit;
-
 }
 
 
@@ -148,7 +147,7 @@ html, body {
   object-fit: cover;
 
   display: block;
-  transition: transform 1.5s ease; /* smooth animation */
+  transition: transform 1.5s ease;
 
 }
 
@@ -187,12 +186,12 @@ html, body {
 }
 #homepage_shop_button {
     border-radius: 10px;
-    background: #EEDFD2;      /* soft warm pink-beige */
-    border: 2px solid #5a3e2b; /* chocolate brown border */
+    background: #EEDFD2;
+    border: 2px solid #5a3e2b;
     height: 50px;
     width: 300px;
     font-size: 14px;
-    color: #5a3e2b;           /* chocolate text for readability */
+    color: #5a3e2b;
     margin-top: 10px;
     font-family: 'Playfair Display', serif;
     cursor: pointer;
@@ -210,7 +209,7 @@ html, body {
 .categories{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 130px;
     flex-wrap: wrap;
 }
 #categories_title{
@@ -224,6 +223,10 @@ html, body {
     padding: 10px;
     background-color: #f5efe6;
     display: block;
+
+}
+#categories_title:hover{
+    color: #c8a96a;
 
 }
 #categories_title a{
@@ -247,15 +250,18 @@ html, body {
   overflow: hidden;
   background: #f5efe6;
   flex-shrink: 0;
+  transition: transform 1s ease; /* smooth animation */
 }
-
+.categories img:hover{
+    transform: scale(1.05);
+}
 
 .categories div .overlay-text {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #c8a96a;
     text-align: center;
     width: 90%;
     font-family: "Georgia", serif;
@@ -277,6 +283,8 @@ html, body {
 #category_3 img{
    transform: scale(1.10);
 }
+
+
 
 
 /*----------------------------------About Celestia_Botanica Styles------------------------------------*/
@@ -331,8 +339,42 @@ html, body {
 /*-----------------------------------About Page------------------------------------*/
 
 .about_page{
-    height:
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: #5a3e2b;
 
+}
+#about_page_title{
+    text-align:center;
+    font-family: "Pinyon Script", cursive;
+    font-size: 32px;
+    margin: 50px 100px;
+    border: 5px double #c8a96a;
+
+}
+
+.about_page h2{
+    font-family: "Playfair Display", serif;
+
+}
+#about_page_p{
+    font-family: "Playfair Display", serif;
+    padding: 0px 40px;
+    margin: 10px 100px 50px;
+    width: 80%;
+    border: 5px double #c8a96a;
+
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 /*-----------------------------------Footer Styles------------------------------------*/
 
