@@ -145,7 +145,6 @@ html, body {
   height: 100%;
   object-position: 40% bottom;
   object-fit: cover;
-
   display: block;
   transition: transform 1.5s ease;
 
@@ -428,7 +427,7 @@ html, body {
 
 .product_layout{
     border: 5px solid #c8a96a;
-    width: 400px;
+    width: 600px;
     margin: 50px;
     display: flex;
     flex-direction: column;
@@ -457,7 +456,11 @@ html, body {
     width: 100%;
     display: block;
     object-fit: cover;
+    transition: transform 1.5s ease;
 
+}
+.product_image img:hover{
+    transform: scale(1.18);
 
 }
 /*-----------------------------------Footer Styles------------------------------------*/
