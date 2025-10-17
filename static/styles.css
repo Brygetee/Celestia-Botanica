@@ -46,7 +46,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     background: #F5EFE6;
     font-family: "Georgia", serif;
-    color: #3d3d4f; /*charcoal */
+    color: #3d3d4f;
 
 }
 #Celestia_Botanica_Title{
@@ -296,7 +296,7 @@ html, body {
     width: 95%;
     background-color: #fffaf3;
     margin: 0 auto 30px auto;
-    border: 5px solid #7c5a42;
+    border: 10px solid #7c5a42;
     padding: 30px;
     box-sizing: border-box;
     gap: 40px;
@@ -337,45 +337,57 @@ html, body {
 }
 
 /*-----------------------------------About Page------------------------------------*/
-
 .about_page{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     color: #5a3e2b;
-
+    background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);
 }
+
 #about_page_title{
     text-align:center;
     font-family: "Pinyon Script", cursive;
-    font-size: 32px;
-    margin: 50px 100px;
+    font-size: 30px;
     border: 5px double #c8a96a;
+    width: 600px;
+    margin: 50px auto 30px;
+    display: inline-block;
+    background-color: #f5efe6;
+
 
 }
 
 .about_page h2{
     font-family: "Playfair Display", serif;
-
 }
+
+
 #about_page_p{
     font-family: "Playfair Display", serif;
-    padding: 0px 40px;
-    margin: 10px 100px 50px;
-    width: 80%;
+    padding: 20px 60px 40px;
+    margin: 10px auto 50px;
+    width: 70%;
     border: 5px double #c8a96a;
+    background-color: #f5efe6;
+
+
+
 
 }
 
-.visually-hidden {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.about_page img {
+    width: 400px;
+    border: 15px inset #c8a96a;
+
 }
+
+#about_page_p,
+#about_page_title {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
 /*-----------------------------------Footer Styles------------------------------------*/
 
 .footer {
