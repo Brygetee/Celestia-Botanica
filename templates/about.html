@@ -1,38 +1,57 @@
 {% extends "base.html" %}
-{% block title %}About Celestia Botanica | Tampa Bay Florist | Weddings & Events{% endblock %}
-
-{% block meta_description %}
-<meta name="description" content="Celestia Botanica is a Tampa-based florist offering elegant, sustainable floral arrangements for weddings, events, and special occasions across the Tampa Bay area." />
-{% endblock %}
+{% block title %}About Celestia Botanica{% endblock %}
 
 {% block content %}
-
 <div class="about_page">
-  <div id="about_page_title"><h1>About Celestia Botanica</h1></div>
-  <div id="about_page_p">
-    <section class="about">
 
+    <!-- Page Title with Gold Frame -->
+    <h1 id="about_page_title">About Celestia Botanica</h1>
 
-      <h2>Our Story</h2>
-      <p>Hi, I’m Ramish, and I started <strong>Celestia Botanica</strong> here in <strong>Tampa, Florida</strong> because I’ve always believed flowers have a way of making everyday life a little more beautiful. I wanted to create a space where people could enjoy elegant, thoughtfully designed arrangements without feeling like luxury was out of reach.</p>
-
-      <h2>Our Craft</h2>
-      <p>Every piece I make is designed with care and intention. I personally hand-select each flower from local, sustainable growers to make sure it’s fresh, vibrant, and just right for the arrangement. The result is something that doesn’t just look beautiful, it feels like it was made for you.</p>
-
-      <h2>What We Provide</h2>
-      <p>Whether it’s for a wedding, a special event, or a heartfelt gift, my goal is to create arrangements that reflect who you are and what the moment means to you. I know that some floral companies charge far more than they should, so I wanted <strong>Celestia Botanica</strong> to offer something different — a way for people to experience stunning, high-quality floral designs that feel indulgent but remain attainable.</p>
-
-      <h2>Areas We Serve</h2>
-      <p>We proudly serve the <strong>Tampa Bay area</strong>, including <strong>St. Petersburg, Clearwater, Sarasota, and Lakeland</strong>, and we’re always open to traveling a bit farther for larger occasions like weddings and events. Every order is handled personally through a quick call or email, so you can expect attentive service and open communication from start to finish. We take time to understand your vision and your budget, and make sure the final design feels thoughtful, polished, and completely yours.</p>
-
-      <h2>Our Philosophy</h2>
-      <p>At its core, <strong>Celestia Botanica</strong> is about people. It’s about celebrating love, milestones, and everyday beauty with flowers that make an impression not just in how they look, but in how they make someone feel.</p>
-
-      <p>To see more of our work, visit our <a href="/gallery">gallery of floral arrangements</a> or <a href="/contact">get in touch</a> to start planning your order today.</p>
-
-      <img src="/static/images/beige_bouquet.jpg" alt="Elegant white floral arrangement by Celestia Botanica in Tampa" class="about_image" />
+    <!-- First Section: Our Story -->
+    <section class="about_section">
+        <div class="about_text">
+            <h2>Our Story</h2>
+            <p>Hi, I’m Ramish, and I started Celestia Botanica here in Tampa, Florida because I’ve always believed flowers have a way of making everyday life a little more beautiful. I wanted to create a space where people could enjoy elegant, thoughtfully designed arrangements without feeling like luxury was out of reach.</p>
+        </div>
     </section>
-  </div>
-</div>
 
+    <!-- Hero Image Section -->
+    <div class="about_hero">
+        <img src="{{ url_for('static', filename='images/beige_bouquet.jpg') }}" alt="Elegant bouquet from Celestia Botanica">
+    </div>
+
+    <!-- Second Section: Our Craft -->
+    <section class="about_section">
+        <div class="about_text">
+            <h2>Our Craft</h2>
+            <p>Every piece I make is designed with care and intention. I personally hand-select each flower from local, sustainable growers to make sure it’s fresh, vibrant, and just right for the arrangement. The result is something that doesn’t just look beautiful, it feels like it was made for you.</p>
+        </div>
+    </section>
+
+    <!-- Third Section: What We Provide -->
+    <section class="about_section">
+        <div class="about_text">
+            <h2>What We Provide</h2>
+            <p>Whether it’s for a wedding, a special event, or a heartfelt gift, my goal is to create arrangements that reflect who you are and what the moment means to you. I know that some floral companies charge far more than they should, so I wanted Celestia Botanica to offer something different — a way for people to experience stunning, high-quality floral designs that feel indulgent but remain attainable.</p>
+        </div>
+    </section>
+
+    <!-- Fourth Section: Areas We Serve -->
+    <section class="about_section">
+        <div class="about_text">
+            <h2>Areas We Serve</h2>
+            <p>We proudly serve the Tampa Bay area, including St. Petersburg, Clearwater, Sarasota, and Lakeland, and we’re always open to traveling a bit farther for larger occasions like weddings and events. Every order is handled personally through a quick call or email, so you can expect attentive service and open communication from start to finish.</p>
+        </div>
+    </section>
+
+    <!-- Fifth Section: Our Philosophy -->
+    <section class="about_section">
+        <div class="about_text">
+            <h2>Our Philosophy</h2>
+            <p>At its core, Celestia Botanica is about people. It’s about celebrating love, milestones, and everyday beauty with flowers that make an impression not just in how they look, but in how they make someone feel.</p>
+            <p><a href="{{ url_for('gallery') }}" class="gallery_link">Visit our gallery →</a></p>
+        </div>
+    </section>
+
+</div>
 {% endblock %}

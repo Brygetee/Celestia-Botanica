@@ -335,59 +335,131 @@ html, body {
     margin: 0 30px;
     margin-bottom: 8px;
 }
-
 /*-----------------------------------About Page------------------------------------*/
-.about_page{
+.about_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5a3e2b;
+  background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);
+  padding-bottom: 80px;
+}
+
+/* Page Title */
+#about_page_title {
+  text-align: center;
+  font-family: "Pinyon Script", cursive;
+  font-size: 50px;
+  border: 6px double #c8a96a;
+  width: fit-content;
+  margin: 60px auto 40px;
+  color: #7b5b3a;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  box-shadow: 0 4px 4px #7E746A;
+}
+
+/* Hero Image */
+.about_hero {
+  width: 500px;
+  max-width: 90%;
+  margin: 60px auto 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.about_hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #c8a96a;
+  box-shadow: 0 12px 35px #7E746A;
+  display: block;
+}
+
+/* Sections */
+.about_section {
+  background-color: #f5efe6;
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 75%;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px #7E746A;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #3e2f1f;
+}
+
+/* Headings & Paragraphs */
+.about_text h2 {
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  color: #7b5b3a;
+  margin-bottom: 15px;
+}
+
+.about_text p {
+  font-family: "Roboto Slab", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4b3621;
+  margin-bottom: 15px;
+  letter-spacing: 0.2px;
+}
+
+/* Gallery Link */
+.gallery_link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c8a96a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.gallery_link:hover {
+  color: #7b5b3a;
+}
+/*-----------------------------------Shop Page Styles--------------------------------------*/
+
+.product_layout{
+    border: 5px solid #c8a96a;
+    width: 400px;
+    margin: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    color: #5a3e2b;
-    background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);
+    align-items: center;
+    color: #7c5a42;
+    padding: 10px;
 }
-
-#about_page_title{
-    text-align:center;
-    font-family: "Pinyon Script", cursive;
-    font-size: 30px;
-    border: 5px double #c8a96a;
-    width: 600px;
-    margin: 50px auto 30px;
-    display: inline-block;
-    background-color: #f5efe6;
-
-
-}
-
-.about_page h2{
+.product_title{
+    text-align: center;
     font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px auto 5px;
 }
 
-
-#about_page_p{
+.product_price{
+    text-align: center;
     font-family: "Playfair Display", serif;
-    padding: 20px 60px 40px;
-    margin: 10px auto 50px;
-    width: 70%;
-    border: 5px double #c8a96a;
-    background-color: #f5efe6;
+    font-size: 16px;
+    margin: 0px auto 5px;
+}
 
-
+.product_image img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 
 
 }
-
-.about_page img {
-    width: 400px;
-    border: 15px inset #c8a96a;
-
-}
-
-#about_page_p,
-#about_page_title {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
 /*-----------------------------------Footer Styles------------------------------------*/
 
 .footer {
