@@ -1,4 +1,4 @@
-/*-----------------------------------Font---------------------------------*/
+/*-----------------------------------Fonts---------------------------------*/
 .playfair {
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -10,10 +10,10 @@
   font-style: normal;
 }
 
-/*----------------------------------Header Styles-------------------------------------*/
+/*------------------------------------------------------------------Base Styles---------------------------------------------------------------------*/
 
 
-/*-----------Announcement bar----------------------------------------------------------*/
+/*Announcement bar*/
 .announcement-bar{
     display: flex;
     justify-content: space-between;
@@ -28,13 +28,11 @@
     box-sizing: border-box;
     margin: 0;
 }
-
 #address_area{
     text-align: right;
     margin: 30px;
 }
-
-/*-----------------Top Header------------------*/
+/*Top Header*/
 
 .top_header{
     position: sticky;
@@ -47,24 +45,23 @@
     background: #F5EFE6;
     font-family: "Georgia", serif;
     color: #3d3d4f;
-
 }
+
 #Celestia_Botanica_Title{
     text-align: center;
     font-size: 28px;
     margin-top: 10px;
     color: #6b4f3a;
-
-
 }
+
 #city_title{
     text-align: center;
     padding-top: 0px;
     margin-top: 0px;
     font-size: 14px;
     color: #7c5a42;
-
 }
+
 .title_link {
     color: inherit;
     text-decoration: none;
@@ -73,7 +70,6 @@
 .title_link:hover {
     color: inherit;
 }
-
 
 .socials{
     display: flex;
@@ -91,7 +87,7 @@
 }
 
 
-/*----------------------------------Nav Bar----------------------------------------------*/
+/*Nav Bar*/
 .nav_bar{
     display: flex;
     justify-content: flex-start;
@@ -111,28 +107,111 @@
     color: #7c5a42;
     text-decoration: none;
 }
-/*----------------------------------Homepage Styles-------------------------------------*/
+
+/*Base Page Styles*/
 body {
   font-family: "Playfair Display", serif;
   background-color: #f3e7d3;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
 .main-content {
   flex: 1;
 }
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/*----------------------------------Hero Styles-------------------------------------*/
+
+/*Footer Styles*/
+
+.footer {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #DBC095;
+  color:  #5a3e2b;
+  font-family: "Playfair Display", serif;
+  padding: 40px 60px;
+  border-top: 2px solid #5a3e2b;
+}
+
+.footer-column {
+  width: 30%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #6b5c4b;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-icons svg {
+  width: 30px;
+  height: 30px;
+
+.social-icons svg:hover {
+  fill: #6b5c4b;
+}
+
+/*  Footer Responsive Layout */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/*---------------------------------------------------------------------Homepage Styles------------------------------------------------------------------*/
+/*Hero Styles*/
 .hero_parent {
   position: relative;
   height: 72vh;
@@ -147,7 +226,6 @@ html, body {
   object-fit: cover;
   display: block;
   transition: transform 1.5s ease;
-
 }
 
 .hero_parent:hover img {
@@ -164,7 +242,6 @@ html, body {
   background-color: rgba(255, 255, 255, 0.04);
 }
 
-
 #hero_text {
   position: absolute;
   top: 50%;
@@ -172,7 +249,7 @@ html, body {
   transform: translateY(-65%);
   color: #5a3e2b;
   text-align: right;
-  z-index: 10;         /* sits above the image and overlay */
+  z-index: 10;
   font-size: 80px;
   font-family: "Pinyon Script", cursive;
 }
@@ -199,12 +276,11 @@ html, body {
 
 #homepage_shop_button:hover {
     background: #f5efe6;
-
-    color: #5a3e2b;           /* keep text same for consistency */
-    border-color: #5a3e2b;    /* unchanged for elegance */
+    color: #5a3e2b;
+    border-color: #5a3e2b;
 }
 
-/*-----------------------------------Category Styles------------------------------------*/
+/*Category Styles*/
 .categories{
     display: flex;
     justify-content: center;
@@ -249,7 +325,7 @@ html, body {
   overflow: hidden;
   background: #f5efe6;
   flex-shrink: 0;
-  transition: transform 1s ease; /* smooth animation */
+  transition: transform 1s ease;
 }
 .categories img:hover{
     transform: scale(1.05);
@@ -275,18 +351,13 @@ html, body {
 .overlay-text a{
     text-decoration: none;
     color: inherit;
-
 }
-
 }
 #category_3 img{
    transform: scale(1.10);
 }
 
-
-
-
-/*----------------------------------About Celestia_Botanica Styles------------------------------------*/
+/*Homepage About Celestia_Botanica Section*/
 .about_celestia_botanica {
     display: flex;
     align-items: center;
@@ -329,12 +400,12 @@ html, body {
 }
 
 #about-text p {
-    font-size: 1rem;               /* ~16px */
+    font-size: 1rem;
     line-height: 1.8;
     margin: 0 30px;
     margin-bottom: 8px;
 }
-/*-----------------------------------About Page------------------------------------*/
+/*----------------------------------------------------About Page Styles--------------------------------------------------------------------------*/
 .about_page {
   display: flex;
   flex-direction: column;
@@ -423,23 +494,56 @@ html, body {
 .gallery_link:hover {
   color: #7b5b3a;
 }
-/*-----------------------------------Shop Page Styles--------------------------------------*/
+/*-----------------------------------------------------------Shop Page Styles-----------------------------------------------------------------------------*/
+
+.shopping_page{
+    background: white;
+}
+
+.shopping_page_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding-bottom: 50px;
+}
+
+.shopping_page_heading{
+    margin: 50px 0px 0px 50px;
+    color: #6b4f3a;
+}
 
 .product_layout{
-    border: 5px solid #c8a96a;
-    width: 600px;
-    margin: 50px;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #7c5a42;
     padding: 10px;
+    overflow: hidden;
+    border: 5px double #c8a96a;
+    box-shadow: 0 4px 4px #7E746A;
+}
+
+.product_entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6b4f3a;
+}
+
+.product_entry a{
+    color: inherit;
+    text-decoration: none;
 }
 .product_title{
     text-align: center;
     font-family: "Playfair Display", serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     margin: 10px auto 5px;
 }
@@ -450,8 +554,15 @@ html, body {
     font-size: 16px;
     margin: 0px auto 5px;
 }
+.product_image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
 .product_image img{
+    border: 2px solid #c8a96a;
+    box-shadow: 0 4px 4px #7E746A;
     height: 100%;
     width: 100%;
     display: block;
@@ -459,84 +570,11 @@ html, body {
     transition: transform 1.5s ease;
 
 }
+
 .product_image img:hover{
+    border: 2px solid #c8a96a;
+    box-shadow: 0 4px 4px #7E746A;
     transform: scale(1.18);
-
-}
-/*-----------------------------------Footer Styles------------------------------------*/
-
-.footer {
-
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  background: #DBC095;
-  color:  #5a3e2b;
-  font-family: "Playfair Display", serif;
-  padding: 40px 60px;
-  border-top: 2px solid #5a3e2b;
 }
 
-.footer-column {
-  width: 30%;
-  font-size: 14px;
-  line-height: 1.6;
-}
 
-.footer-column h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column li {
-  margin-bottom: 6px;
-}
-
-.footer-column a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-column a:hover {
-  color: #6b5c4b;
-}
-
-/* Social icons */
-.social-icons {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.social-icons svg {
-  width: 30px;
-  height: 30px;
-
-.social-icons svg:hover {
-  fill: #6b5c4b;
-}
-
-/*  Footer Responsive Layout */
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-column {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .social-icons {
-    justify-content: center;
-  }
-}
