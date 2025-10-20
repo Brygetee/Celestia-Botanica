@@ -39,28 +39,42 @@
 .top_header{
     position: sticky;
     top: 0;
-    z-index: 1000; /* stays above other content */
-    height: 80px;
-    padding: 5px 0px 8px 0px;
+    z-index: 1000;
+    height: 110px;
+    padding: 8px 0px 8px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     background: #F5EFE6;
     font-family: "Georgia", serif;
     color: #3d3d4f;
+    line-height: .9;
 
+}
+.title_link:hover #site_title,
+.title_link:hover #city_title {
+    color: #c8a96a;
 }
 #Celestia_Botanica_Title{
     text-align: center;
-    font-size: 28px;
-    margin-top: 10px;
+    margin: 0px;
     color: #6b4f3a;
+    border: 5px double #c8a96a;
+    width: 350px;
+    padding-top: 12px;
+    justify-self: center;
 
+}
+#Celestia_Botanica_Title:hover, #city_title:hover {
 
+}
+#site_title {
+    font-family: "Pinyon Script", cursive;
+    font-size: 40px;
 }
 #city_title{
     text-align: center;
-    padding-top: 0px;
-    margin-top: 0px;
+    padding-bottom: 12px;
     font-size: 14px;
     color: #7c5a42;
 
@@ -87,7 +101,7 @@
     stroke: #5a3e2b;
 }
 .socials svg:hover{
-    stroke: #7c5a42;
+    stroke: #c8a96a;
 }
 
 
@@ -97,7 +111,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 16px;
     gap: 20px;
 }
 
@@ -108,7 +122,7 @@
 }
 
 .nav_link:hover {
-    color: #7c5a42;
+    color: #c8a96a;
     text-decoration: none;
 }
 /*----------------------------------Homepage Styles-------------------------------------*/
@@ -132,7 +146,8 @@ html, body {
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/*----------------------------------Hero Styles-------------------------------------*/
+/*----------------------------------Hero Styles (OLD IMAGE VERSION)-------------------------------------*/
+/*
 .hero_parent {
   position: relative;
   height: 72vh;
@@ -147,7 +162,6 @@ html, body {
   object-fit: cover;
   display: block;
   transition: transform 1.5s ease;
-
 }
 
 .hero_parent:hover img {
@@ -163,45 +177,77 @@ html, body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.04);
 }
+*/
 
+/*----------------------------------Hero Styles (VIDEO VERSION)-------------------------------------*/
+.hero_parent {
+  position: relative;
+  height: 72vh;
+  overflow: hidden;
+  border: 3px solid #5a3e2b;
+}
+
+.hero_parent video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1; /* video behind overlay and text */
+}
+
+.hero_parent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.04); /* subtle overlay to help text pop */
+  z-index: 2;
+}
 
 #hero_text {
   position: absolute;
-  top: 50%;
-  right: 5%;
+  top: 60%;
+  left: 2%;
   transform: translateY(-65%);
-  color: #5a3e2b;
-  text-align: right;
-  z-index: 10;         /* sits above the image and overlay */
-  font-size: 80px;
+  color: #f3eee0;
+  text-align: left;
+  z-index: 3; /* above overlay and video */
+  font-size: 108px;
   font-family: "Pinyon Script", cursive;
+  line-height:1;
 }
 
 #hero_text p {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    margin-top: 30px;
-    line-height: 0.4;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight:bold;
+  margin-top: 30px;
+  line-height: 0.4;
 }
+
 #homepage_shop_button {
-    border-radius: 10px;
-    background: #EEDFD2;
-    border: 2px solid #5a3e2b;
-    height: 50px;
-    width: 300px;
-    font-size: 14px;
-    color: #5a3e2b;
-    margin-top: 10px;
-    font-family: 'Playfair Display', serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border-radius: 10px;
+  background: #EEDFD2;
+  border: 2px solid #5a3e2b;
+  height: 50px;
+  width: 300px;
+  font-size: 14px;
+  color: #5a3e2b;
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #homepage_shop_button:hover {
-    background: #f5efe6;
-
-    color: #5a3e2b;           /* keep text same for consistency */
-    border-color: #5a3e2b;    /* unchanged for elegance */
+  background: #f5efe6;
+  color: #5a3e2b;           /* keep text same for consistency */
+  border-color: #5a3e2b;    /* unchanged for elegance */
 }
 
 /*-----------------------------------Category Styles------------------------------------*/
@@ -286,7 +332,7 @@ html, body {
 
 
 
-/*----------------------------------About Celestia_Botanica Styles------------------------------------*/
+/*About Celestia_Botanica*/
 .about_celestia_botanica {
     display: flex;
     align-items: center;
@@ -340,7 +386,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   color: #5a3e2b;
-  background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);
+   background-image: url("../static/images/field.jpg");
+   background-size: cover;
+  /*background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);*/
   padding-bottom: 80px;
 }
 
@@ -349,43 +397,26 @@ html, body {
   text-align: center;
   font-family: "Pinyon Script", cursive;
   font-size: 50px;
-  border: 6px double #c8a96a;
   width: fit-content;
-  margin: 60px auto 40px;
+  margin: 10px auto 40px;
   color: #7b5b3a;
   letter-spacing: 1px;
   padding: 10px 30px;
-  box-shadow: 0 4px 4px #7E746A;
 }
 
-/* Hero Image */
-.about_hero {
-  width: 500px;
-  max-width: 90%;
-  margin: 60px auto 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.about_hero img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  border: 2px solid #c8a96a;
-  box-shadow: 0 12px 35px #7E746A;
-  display: block;
-}
 
 /* Sections */
 .about_section {
-  background-color: #f5efe6;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 40px 50px;
-  width: 75%;
+  width: 70%;
   margin: 40px auto;
   box-shadow: 0 8px 20px #7E746A;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+      url("../static/images/linen_background.jpg");
 }
 
 .about_section:hover {
@@ -425,7 +456,7 @@ html, body {
 }
 /*-----------------------------------Shop Page Styles--------------------------------------*/
 .shopping_page{
-
+ background: #fffbfb;
 }
 
 
@@ -439,9 +470,11 @@ html, body {
 }
 .shopping_page_heading{
     margin: 50px 0px 0px 50px;
-    margin-left: 50px;
     color: #6b4f3a;
+    text-align:center;
+
 }
+
 .product_layout{
     width: 500px;
     height: 500px;
@@ -454,8 +487,7 @@ html, body {
     color: #7c5a42;
     padding: 10px;
     overflow: hidden;
-    border: 5px double #c8a96a;
-    box-shadow: 0 4px 4px #7E746A;
+
 }
 .product_entry{
     display: flex;
