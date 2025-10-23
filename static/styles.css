@@ -1,4 +1,4 @@
-/*-----------------------------------Font---------------------------------*/
+/*-----------------------------------Fonts---------------------------------*/
 .playfair {
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -7,6 +7,12 @@
 .pinyon-script-regular {
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
@@ -55,29 +61,29 @@
 .title_link:hover #city_title {
     color: #c8a96a;
 }
+
 #Celestia_Botanica_Title{
     text-align: center;
     margin: 0px;
     color: #6b4f3a;
     border: 5px double #c8a96a;
-    width: 350px;
+    border-radius: 4px;
+    width: 290px;
     padding-top: 12px;
     justify-self: center;
-
 }
-#Celestia_Botanica_Title:hover, #city_title:hover {
 
-}
 #site_title {
     font-family: "Pinyon Script", cursive;
-    font-size: 40px;
+    font-size: 35px;
 }
 #city_title{
     text-align: center;
     padding-bottom: 12px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 700;
     color: #7c5a42;
-
+    font-family: 'Cormorant Garamond', serif;
 }
 .title_link {
     color: inherit;
@@ -111,7 +117,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 18px;
     gap: 20px;
 }
 
@@ -205,7 +211,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.04); /* subtle overlay to help text pop */
+  background-color: rgba(255, 238, 210, 0.06);
   z-index: 2;
 }
 
@@ -216,178 +222,295 @@ html, body {
   transform: translateY(-65%);
   color: #f3eee0;
   text-align: left;
-  z-index: 3; /* above overlay and video */
-  font-size: 108px;
+  z-index: 3;
+  font-size: 95px;
   font-family: "Pinyon Script", cursive;
   line-height:1;
 }
 
 #hero_text p {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight:bold;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
   margin-top: 30px;
-  line-height: 0.4;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 #homepage_shop_button {
-  border-radius: 10px;
-  background: #EEDFD2;
-  border: 2px solid #5a3e2b;
-  height: 50px;
-  width: 300px;
-  font-size: 14px;
-  color: #5a3e2b;
-  margin-top: 10px;
-  font-family: 'Playfair Display', serif;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fdf6ec, #f5efe6);
+  border: 2px solid #c8a96a;
+  height: 60px;
+  width: 340px;
+  padding: 0 22px;
+  font-size: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: #6f5644;
+  margin-top: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(90, 62, 43, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+#homepage_shop_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+}
+
+#homepage_shop_button:hover::after {
+  left: 100%;
 }
 
 #homepage_shop_button:hover {
-  background: #f5efe6;
-  color: #5a3e2b;           /* keep text same for consistency */
-  border-color: #5a3e2b;    /* unchanged for elegance */
+  background: linear-gradient(145deg, #7a604d, #6f5644); /* elegant hover gradient */
+  color: #fdf6ec;
+  border-color: #fdf6ec; /* border changes to cream on hover for subtle luxury effect */
+  box-shadow: 0 10px 25px rgba(90, 62, 43, 0.45);
+  transform: translateY(-2px);
 }
+
 
 /*-----------------------------------Category Styles------------------------------------*/
-.categories{
+/* ---------------- Categories Section ---------------- */
+#categories_section {
+    padding: 80px 0;
+}
+
+#categories_background {
+    /*background-color: #fdf6ec;         /* soft cream frame */
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url("../static/images/linen_background.jpg");
+    padding: 60px 0;                   /* padding around cards */
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(111, 86, 68, 0.15);
+    border: 2px solid #c8a96a;
+}
+
+#categories_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#categories_title {
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+    font-weight: 500;
+    color: #6b4f3a;
+    margin-bottom: 40px;
+
+}
+
+#categories_title:hover {
+    color: #c8a96a;
+}
+/* Cards row */
+.categories_frame {
     display: flex;
     justify-content: center;
-    gap: 130px;
+    gap: 70px;
     flex-wrap: wrap;
 }
-#categories_title{
-    color: #7c5a42;
-    text-align: center;
-    margin: 50px auto;
-    font-family: "Pinyon Script", cursive;
-    font-size: 50px;
-    border: 10px double #c8a96a;
-    width: 400px;
-    padding: 10px;
-    background-color: #f5efe6;
-    display: block;
 
-}
-#categories_title:hover{
-    color: #c8a96a;
-
-}
-#categories_title a{
-    text-decoration: none;
-    color: inherit;
-}
-.categories div{
-    position: relative;
-    height: 400px;
-    width: 350px;
-    overflow: hidden;
-    border: 15px double #c8a96a;
-    background: #f5efe6;
-    flex-shrink: 0;
-
-}
-.categories img{
-  position: relative;
-  height: 400px;
-  width: 350px;
-  overflow: hidden;
-  background: #f5efe6;
-  flex-shrink: 0;
-  transition: transform 1s ease; /* smooth animation */
-}
-.categories img:hover{
-    transform: scale(1.05);
-}
-
-.categories div .overlay-text {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #c8a96a;
-    text-align: center;
-    width: 90%;
-    font-family: "Georgia", serif;
-    font-size: 1.2rem;
+/* Individual card */
+.category_card {
+    width: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: none;
-    background: none;
-}
-.overlay-text a{
     text-decoration: none;
     color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
+.category_card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(111, 86, 68, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
 }
-#category_3 img{
-   transform: scale(1.10);
+
+.category_card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(111, 86, 68, 0.25);
+}
+
+/* Category name under image */
+.category_name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6b4f3a;
+    text-align: center;
+    margin-top: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category_name:hover {
+    color: #c8a96a;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .categories_frame {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .categories_frame {
+        justify-content: space-around;
+    }
+    .category_card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories_frame {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .category_card {
+        width: 80%;
+    }
 }
 
 
 
 
-/*About Celestia_Botanica*/
-.about_celestia_botanica {
+.celestia_story {
+    background-color: #f8f3ec; /* richer neutral — not blending into white bg */
+    padding: 80px 0;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.celestia_story_inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 400px;
-    width: 95%;
-    background-color: #fffaf3;
-    margin: 0 auto 30px auto;
-    border: 10px solid #7c5a42;
-    padding: 30px;
-    box-sizing: border-box;
-    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 80px;
 }
 
-#about-image {
-    height: 100%;
+.celestia_story_image {
+    flex: 1 1 50%;
+    position: relative;
     overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-#about-image img {
+.celestia_story_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.03);
+    transition: transform 0.7s ease;
+}
+
+.celestia_story_image img:hover {
+    transform: scale(1.08);
+}
+
+.celestia_story_text {
+    flex: 1 1 50%;
+    color: #463729;
+    padding-right: 10px;
+}
+
+.celestia_story_text h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #5b4536;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.celestia_story_text h3::after {
+    content: "";
     display: block;
-    border-radius: 10px;
+    width: 70px;
+    height: 2px;
+    background-color: #c8a96a; /* subtle gold line accent */
+    margin-top: 15px;
 }
 
-#about-text {
-    flex: 1;
-    text-align: left;
-    align-self: flex-start;
+.celestia_story_text p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
     color: #4a3b22;
+    max-width: 600px;
 }
 
-#about-text h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-    text-align: center;
+/* Decorative frame background */
+.celestia_story::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 5%;
+    right: 5%;
+    border: 1px solid rgba(200, 169, 106, 0.4);
+    border-radius: 24px;
+    pointer-events: none;
 }
 
-#about-text p {
-    font-size: 1rem;               /* ~16px */
-    line-height: 1.8;
-    margin: 0 30px;
-    margin-bottom: 8px;
+/* Responsive layout */
+@media (max-width: 992px) {
+    .celestia_story_inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .celestia_story_text {
+        padding-right: 0;
+    }
+
+    .celestia_story_text h3::after {
+        margin: 15px auto 0;
+    }
+
+    .celestia_story_image {
+        width: 100%;
+        height: 400px;
+    }
 }
+
 /*-----------------------------------About Page------------------------------------*/
 .about_page {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #5a3e2b;
-   background-image: url("../static/images/field.jpg");
-   background-size: cover;
+    background: linear-gradient(135deg, #C5C0AD 0%, #EAE7DC 100%);
   /*background: linear-gradient(to bottom, #f8f3ea, #e6cfa2);*/
   padding-bottom: 80px;
 }
@@ -395,13 +518,13 @@ html, body {
 /* Page Title */
 #about_page_title {
   text-align: center;
-  font-family: "Pinyon Script", cursive;
-  font-size: 50px;
+  font-size: 60px;
   width: fit-content;
-  margin: 10px auto 40px;
+  margin: 0px auto 20px;
   color: #7b5b3a;
   letter-spacing: 1px;
-  padding: 10px 30px;
+  padding: 0px 30px;
+  font-family: "Lora", serif;
 }
 
 
@@ -414,7 +537,7 @@ html, body {
   box-shadow: 0 8px 20px #7E746A;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-image:
+        background-image:
       linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
       url("../static/images/linen_background.jpg");
 }
@@ -454,6 +577,21 @@ html, body {
 .gallery_link:hover {
   color: #7b5b3a;
 }
+
+.about_us_page_img_container{
+    display: flex;
+    justify-content: center;
+
+}
+#about_us_page_img{
+    width: 600px;
+    height: auto;
+    border: 2px solid #7b5b3a;
+    border-radius: 5px
+}
+
+
+
 /*-----------------------------------Shop Page Styles--------------------------------------*/
 .shopping_page{
  background: #fffbfb;
@@ -541,7 +679,6 @@ html, body {
 /*-----------------------------------Footer Styles------------------------------------*/
 
 .footer {
-
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -549,7 +686,7 @@ html, body {
   background: #DBC095;
   color:  #5a3e2b;
   font-family: "Playfair Display", serif;
-  padding: 40px 60px;
+  padding: 40px 60px 20px;
   border-top: 2px solid #5a3e2b;
 }
 
