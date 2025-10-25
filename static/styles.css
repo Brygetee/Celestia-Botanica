@@ -226,6 +226,8 @@ html, body {
   font-size: 95px;
   font-family: "Pinyon Script", cursive;
   line-height:1;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.9));
+  text-shadow: none;
 }
 
 #hero_text p {
@@ -274,9 +276,9 @@ html, body {
 }
 
 #homepage_shop_button:hover {
-  background: linear-gradient(145deg, #7a604d, #6f5644); /* elegant hover gradient */
+  background: linear-gradient(145deg, #7a604d, #6f5644);
   color: #fdf6ec;
-  border-color: #fdf6ec; /* border changes to cream on hover for subtle luxury effect */
+  border-color: #fdf6ec;
   box-shadow: 0 10px 25px rgba(90, 62, 43, 0.45);
   transform: translateY(-2px);
 }
@@ -313,8 +315,26 @@ html, body {
     font-weight: 500;
     color: #6b4f3a;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    display: inline-block; /* makes the underline match text width */
+    padding-bottom: 12px;  /* space between text and underline */
+    position: relative;
 
 }
+/* Decorative underline */
+#categories_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    width: 200px;
+    height: 3px;
+    background-color: #c8a96a;
+    border-radius: 3px;
+    opacity: 0.9;
+    }
+
 
 #categories_title:hover {
     color: #c8a96a;
@@ -357,13 +377,14 @@ html, body {
 /* Category name under image */
 .category_name {
     font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: #6b4f3a;
     text-align: center;
     margin-top: 16px;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .category_name:hover {
@@ -400,9 +421,10 @@ html, body {
 
 
 
+/*celestia story*/
 
 .celestia_story {
-    background-color: #f8f3ec; /* richer neutral — not blending into white bg */
+    background-color: #f8f3ec;
     padding: 80px 0;
     position: relative;
     margin-bottom: 50px;
@@ -441,6 +463,7 @@ html, body {
     flex: 1 1 50%;
     color: #463729;
     padding-right: 10px;
+
 }
 
 .celestia_story_text h3 {
@@ -674,7 +697,186 @@ html, body {
     box-shadow: 0 4px 4px #7E746A;
     transform: scale(1.18);
 }
+/*------------------ Gallery Page ------------------*/
+.gallery_page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px 60px;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+        url("../static/images/linen_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: auto;
+    box-sizing: border-box;
+}
 
+.gallery_page_heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.gallery_title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    color: #6b4f3a;
+    margin-bottom: 20px;
+}
+
+.gallery_subtitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: #7c5a42;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Masonry Layout */
+.gallery_masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 30px; /* small gap between images */
+}
+
+.gallery_card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 3px solid #c8a96a;
+}
+
+.gallery_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 0px;
+}
+
+/* Hover effect */
+.gallery_card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery_card:hover {
+    box-shadow: 0 15px 35px rgba(111, 86, 68, 0.25);
+}
+
+/* Size variations for editorial layout */
+.gallery_card.small {
+    grid-row: span 1;
+}
+
+.gallery_card.medium {
+    grid-row: span 2;
+}
+
+.gallery_card.large {
+    grid-row: span 3;
+}
+
+/* Optional subtle overlay */
+.gallery_card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.02);
+    transition: background 0.3s ease;
+}
+
+.gallery_card:hover::after {
+    background: rgba(0,0,0,0.08);
+}
+
+
+/*---------------------- Contact Page ----------------------*/
+.contact_page {
+    background: #f3e7d3;  /* soft cream background */
+    min-height: 70vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact_page_heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.contact_title {
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+    color: #6b4f3a;
+    margin-bottom: 10px;
+}
+
+.contact_subtitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    color: #5a3e2b;
+    line-height: 1.5;
+}
+
+.contact_form_wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact_form label {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    color: #5a3e2b;
+    text-align: left;
+}
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #c8a96a;
+    border-radius: 6px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.contact_form textarea {
+    min-height: 150px;
+}
+
+.contact_submit {
+    background: linear-gradient(145deg, #fdf6ec, #f5efe6);
+    border: 2px solid #c8a96a;
+    border-radius: 14px;
+    padding: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #6f5644;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.contact_submit:hover {
+    background: linear-gradient(145deg, #7a604d, #6f5644);
+    color: #fdf6ec;
+    border-color: #fdf6ec;
+}
 
 /*-----------------------------------Footer Styles------------------------------------*/
 
@@ -752,3 +954,5 @@ html, body {
     justify-content: center;
   }
 }
+
+

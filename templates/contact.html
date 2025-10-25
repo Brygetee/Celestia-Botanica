@@ -2,7 +2,27 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
+<div class="contact_page">
 
-Contact Page
+    <div class="contact_page_heading">
+        <h1 class="contact_title">Get In Touch</h1>
+        <p class="contact_subtitle">We would love to hear from you! Please fill out the form below.</p>
+    </div>
 
+    <div class="contact_form_wrapper">
+        <form class="contact_form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="contact_submit">Send Message</button>
+        </form>
+    </div>
+
+</div>
 {% endblock %}
